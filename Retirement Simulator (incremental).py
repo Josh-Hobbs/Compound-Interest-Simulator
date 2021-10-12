@@ -67,9 +67,10 @@ def Graph():
         plt.ticklabel_format(style='plain')
         plt.title('Compound Interest of  Principle and Incremental Contribution Simulator')
 
-      
+        textreturn = Return*100
+        textreturn = str(textreturn)
         
-        p, = plt.plot(length,tlist,label=(graphlabel + ' dollar investment with ' + monc + ' dollars contributed monthly'))
+        p, = plt.plot(length,tlist,label=(graphlabel + ' dollar investment with ' + monc + ' dollars contributed monthly with a yearly return rate of '+ textreturn + "%"))
         plt.legend(loc='upper left')
         plt.text(Months, int(tlist[-1]), ' $' + str(tlist[-1]))
         
@@ -95,6 +96,3 @@ def Graph():
     Formula()
     plt.show()
 Graph()
-
-
-
